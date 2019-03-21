@@ -144,7 +144,7 @@ public class LoginActivityTest {
     @Test
     public void EmailBlankPasswordValid() throws InterruptedException {
         onView(withId(R.id.input_email)).perform(typeText(""));
-        onView(withId(R.id.input_password)).perform(typeText("validPass"));
+        onView(withId(R.id.input_password)).perform(typeText("testPass"));
         onView(withId(R.id.btn_login)).perform(click());
         onView(withText("Login failed")).inRoot(withDecorView(not(activityActivityTestRule.getActivity().getWindow().getDecorView()))).check(matches(isDisplayed()));
         Thread.sleep(5000);
